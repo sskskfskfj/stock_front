@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주식 데이터 조회</title>
+    <link href="./main.css" rel="stylesheet">
+<body>
+    <h1>주식 데이터 조회</h1>
+    <input type="text" id="ticker" placeholder="기업명 입력">
+    <input type="number" id="year" placeholder="최근 n년간의 데이터 ex/ 1,2,3">
+    <button id="sendRequest">send</button>
+
+    <div id="loading-message" class="loading">
+        <div class="spinner"></div>
+        로딩 중...
+    </div>
+    <br><br>
+    <div id="target-element"></div>
+    <br><br>
+    <div id="news-container">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>기사 제목</th>
+                    <th>뉴스 채널</th>
+                    <th>기사 링크</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+    </div>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
